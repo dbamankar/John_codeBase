@@ -1,0 +1,83 @@
+<html lang="en">
+  <style>
+    .form,
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.form {
+  width: 35%;
+  padding: 10px 50px;
+  
+}
+.form div {
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#addEvent {
+  margin: 10px 0px;
+}
+
+#result {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+th,
+td {
+  padding: 5px 10px;
+}
+
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Manager</title>
+    
+  </head>
+  <body>
+    <main>
+      <div class="form">
+        <h2>Event Management</h2>
+        <div>Event Name <input type="text" id="name" required /></div>
+        <div>Venue <input type="text" id="venue" required /></div>
+        <div>Date <input type="date" id="date" required /></div>
+        <div>Cost/day <input type="number" id="price" required /></div>
+        <div>
+          Number of days Needed <input type="number" id="count" required />
+        </div>
+        <button onclick="addEvent()" id="addEvent">Add Event</button>
+        <div id="result">
+          <table id="resultTable">
+            <thead>
+              <tr>
+                <th>Event Name</th>
+                <th>Venue</th>
+                <th>Date</th>
+                <th>Total Cost</th>
+                <th>Cancel Event</th>
+              </tr>
+            </thead>
+            <tbody id="resultTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
